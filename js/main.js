@@ -1,8 +1,7 @@
 // 1. Створіть дві змінні для зберігання значень двох текстових полів. Перевірте, чи обидві змінні не є порожніми. Якщо обидва поля заповнені, вивести повідомлення "Обидва поля заповнені", якщо ні — "Не всі поля заповнені".
 
-const firstText =
-  "Площа квадрата, побудованого на гіпотенузі прямокутного трикутника, дорівнює сумі площ квадратів, побудованих на його катетах.";
-const secondText = "";
+const firstText = prompt("Введіть любий текст");
+const secondText = prompt("Введіть любий текст другий раз (Обовʼязково)");
 
 if (firstText !== "" && secondText !== "") {
   console.log("Обидва поля заповнені");
@@ -12,8 +11,8 @@ if (firstText !== "" && secondText !== "") {
 
 // 2. Створіть дві змінні для зберігання числових значень. Обчисліть їх суму. Якщо сума більше 10 — виведіть "Сума більша за 10", якщо ні — "Сума менша або дорівнює 10".
 
-const a = 7;
-const b = 3;
+const a = Number(prompt("Введіть любе число"));
+const b = Number(prompt("Введіть любе число (Обовʼязково)"));
 const sum = a + b;
 
 if (sum > 10) {
@@ -24,10 +23,19 @@ if (sum > 10) {
 
 // 3. Створіть змінну для зберігання тексту. Перевірте, чи містить цей текст слово "JavaScript". Якщо містить, виведіть "Текст містить слово JavaScript", якщо ні — "Текст не містить слово JavaScript".
 
-const text =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quos fugit obcaecati debitis quibusdam aperiam nihil atque, nemo pariatur nesciunt JavaScript doloremque, consectetur voluptatibus eius delectus neque assumenda impedit beatae officiis.";
+const text = prompt(
+  "Введіть текст(Цей текст може містити JavaScript а може і не містити)"
+);
 
-if (text.includes("JavaScript")) {
+if (
+  text.includes("JavaScript") ||
+  text.includes("JS") ||
+  text.includes("Javascript") ||
+  text.includes("Java script") ||
+  text.includes("js") ||
+  text.includes("javascript") ||
+  text.includes("java script")
+) {
   console.log("Текст містить слово JavaScript");
 } else {
   console.log("Текст не містить слово JavaScript");
@@ -45,9 +53,9 @@ if (c > 10 && c < 20) {
 
 // 5. Створіть змінні для зберігання значень полів (ім'я, email, пароль). Перевірте, чи ім'я містить не менше 3 символів, чи email містить символ @ та крапку після нього, а пароль не менше 6 символів. Якщо всі умови виконані — виведіть "Перенаправлення на іншу сторінку", якщо ні — "Помилка: неправильне заповнення".
 
-const name = "Yarosla";
-const email = "yarik228228@icloud.com";
-const password = "4920165903";
+const name = prompt("Введіть ваше імʼя");
+const email = prompt("Введіть вашу почту");
+const password = prompt("Введіть пароль до почти");
 
 if (
   name.length >= 3 &&
